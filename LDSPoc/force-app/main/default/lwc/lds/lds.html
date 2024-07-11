@@ -1,0 +1,16 @@
+<template>
+    <h4>inside lds component</h4>
+    <lightning-card title="Account List">
+        <template if:true={accountList}>
+            <ul>
+                <template for:each={accountList} for:item="account">
+                    <li key={account.id}>{account.fields.Name.value}</li>
+                </template>
+            </ul>
+        </template>
+        <template if:false={accountList}>
+            <h4>Maa chudao</h4>
+        </template>
+    </lightning-card>
+ 
+</template>
